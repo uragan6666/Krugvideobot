@@ -5,7 +5,7 @@ import subprocess
 TOKEN = os.getenv('TOKEN')   # ← ось тут зміна
 
 bot = telebot.TeleBot(TOKEN)
-
+bot.delete_webhook(drop_pending_updates=True)
 @bot.message_handler(commands=['start'])
 def start(message):
     bot.send_message(message.chat.id, 'Кидай відео — зроблю кружок')
