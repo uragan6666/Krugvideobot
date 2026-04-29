@@ -1,2 +1,7 @@
+providers = ["...", "python"]
+
 [phases.setup]
-aptPkgs = ["ffmpeg"]
+nixPkgs = ["...", "ffmpeg"]
+
+[start]
+cmd = "python bot.py"
